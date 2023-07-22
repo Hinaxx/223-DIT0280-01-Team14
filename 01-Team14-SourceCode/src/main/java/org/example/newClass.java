@@ -198,8 +198,6 @@ public class newClass extends CommonPageObject {
         } catch (Exception e) {
             System.out.println("not match");
         }
-
-
     }
     @Test
     public void test7() throws Exception  {
@@ -244,11 +242,11 @@ public class newClass extends CommonPageObject {
             System.out.println("not match");
         }
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         sizeXS.click();
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         btnAddToCart.click();
 
@@ -256,11 +254,11 @@ public class newClass extends CommonPageObject {
 
         btnIncrease.click();
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         close.click();
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         sizeXS.click();
 
@@ -272,12 +270,12 @@ public class newClass extends CommonPageObject {
             }
         }
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         sizeXXL.click();
 
 //        waitUntil(sizeXXL);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         System.out.println(textMain.getText());
 
         try {
@@ -330,15 +328,22 @@ public class newClass extends CommonPageObject {
         }
         del.click();
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         del.click();
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         del.click();
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
+        System.out.println(total.getText());
+        try {
+            Assert.assertEquals(dataField.getData(3,0), String.valueOf(total.getText()));
+            System.out.println("match");
+        } catch (Exception e) {
+            System.out.println("not match");
+        }
 
         closeMenu.click();
     }
